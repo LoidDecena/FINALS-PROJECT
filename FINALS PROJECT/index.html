@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Go Store</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./homepage/homepage.css">
+    <link rel="stylesheet" href="./homepage/footer.css">
+    <script src="https://kit.fontawesome.com/2cfefaba62.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+    <a href="#" class="logo">SSERAFIM SHOP</a>
+    
+    <nav class="navbar">
+        <a class="active" href="#home">home</a>
+        <a href="#store">store</a>
+        <a href="#about"> About</a>
+
+    </nav>
+
+    <div class="icons">
+        <i class="fas fa-bars" id="menu-bars"></i>
+        <i class="fas fa-search" id="search-icon"></i>
+        <a href="cart.html" class="fas fa-shopping-cart"></a>
+    </div>
+    <div class="iconProfile">
+
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const profile = localStorage.getItem("CurrentLoginEmail");
+            if (profile) {
+                // If profile exists (user is logged in), show sign out and profile links
+                document.querySelector('.iconProfile').innerHTML = `
+                    <a href="index.html" class="logout">Logout</a>
+                    <a href="profile.html" class="sign-icons">Profile</a>
+                `;
+            } else {
+                // If profile doesn't exist (user is not logged in), show sign up and sign in links
+                document.querySelector('.iconProfile').innerHTML = `
+                    <a href="registration.html" class="sign-icons">Sign Up</a>
+                    <a href="login.html" class="sign-icons">Sign In</a>
+                `;
+            }
+        });
+    </script>
+    
+</header>
+
+<!-- search form -->
+<form action="" id="search-form">
+    <input type="search" placeholder="Search Item" name="" id="search-box">
+    <label for="search-box" class="fas fa-search"></label>
+    <i class="fas fa-times" id="close"></i>
+</form>
+
+<!-- home section -->
+
+<section class="home" id="home">
+    <div class="swiper home-slider">
+        <div class="swiper-wrapper wrapper">
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span>GLOBAL EVENTS</span>
+                    <h3>Pokemon GO Fest 2024: Global Ticket</h3>
+                    <p>
+                        Includes: <br> • An encounter with the Mythical Pokemon Marshadow <br> • Up to 9 free Raid Passes each day from spiining Gym Photo Discs <br> • Special Pokemon hatching from 7km Eggs <br> • Incense may attract special Pokemon <br> • A higher chance to encounter Shiny Pokemon during the event</p>
+                        <button id="buyButton" class="btn">₱439.00</button>
+                </div>
+                <div class="image">
+                    <img src="./images/GO_FEST_Logo.webp" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span>GLOBAL EVENTS</span>
+                    <h3>Wonder Ticket (Basic)</h3>
+                    <p>Rewards for Part 1: <br> • Poipole Helmet avatar item <br> • Encounters with Beedrill, Galarian Slowpoke, and Cacnea <br> • 1 Premium Battle Pass, 1 Incense, 5 Rare Candies, 1 Lucky Egg, 1 Star Piece, and more <br> • 20,000 XP and 10,000 Stardust!</p>
+                    <button id="buyButton" class="btn">₱289.00</button>
+                </div>
+                <div class="image">
+                    <img src="./images/Season_of_World_of_Wonders.webp" alt="">
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span>GLOBAL EVENTS</span>
+                    <h3>Chasing Team GO Rocket Timed Research Ticket</h3>
+                    <p>Included rewards: <br> •An encounter with Pawniard <br> • 6 Mysterious Components, 1 Super Incubator, and 1 Rocket Radar <br> For more details, visit the <a href="https://pokemongolive.com/?hl=en">website</a> </p>
+                    <button id="buyButton" class="btn">₱59.00</button>
+                </div>
+                <div class="image">
+                    <img src="./images/Team_GO_Rocket.webp" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+
+<!--POKECOINS-->
+
+<section class="store" id="store">
+    <h3 class="sub-heading">IN GAME CURRENCY</h3>
+    <h1 class="heading">POKECOINS</h1>
+
+    <div class="box-container">
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a> 
+            <img class="img" src="./pokemon img/550 Pokecoins.webp">
+            <h3>550 Pokecoins</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₱149.00</span> <br>
+            <button id="buyButton" class="btn">add to cart</button>
+        </div>
+
+
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a> 
+            <img class="img" src="./pokemon img/1200 Pokecoins.webp">
+            <h3>1200 Pokecoins</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <span>₱289.00</span> <br>
+            <button id="buyButton" class="btn">add to cart</button>
+        </div>
+
+        
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a> 
+            <img class="img" src="./pokemon img/2500 pokecoins.webp">
+            <h3>2500 Pokecoins</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₱589.00</span> <br>
+            <button id="buyButton" class="btn">add to cart</button>
+        </div>
+
+        
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a> 
+            <img class="img" src="./pokemon img/5200 pokecoins.webp">
+            <h3>5200 Pokecoins</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₱1170.00</span> <br>
+            <button id="buyButton" class="btn">add to cart</button>
+        </div>
+
+        
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a> 
+            <img class="img" src="./pokemon img/14500 pokecoins.webp">
+            <h3>14500 Pokecoins</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₱2950.00</span> <br>
+            <button id="buyButton" class="btn">add to cart</button>
+        </div>
+
+
+</section>
+
+<!--BOXES-->
+
+<section class="store" id="store">
+    <h3 class="sub-heading">LIMITED TIME ONLY!</h3>
+    <h1 class="heading">BOXES</h1>
+
+    <div class="box-container">
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a> 
+            <img class="img" src="./images/Rocket Box.webp">
+            <h3>GO ROCKET BOX</h3>
+            <h4>Contents: <br> 1x Premium Battle Pass <br> 1x Rocket Radar <br> 1x Egg Incubator </h4>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₱120.00</span>
+            <button id="buyButton" class="btn">add to cart</button>
+        </div>
+
+
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a> 
+            <img class="img" src="./images/Trainee Box.webp">
+            <h3>TRAINEE BOX</h3>
+            <h4>Contents: <br> 50x Premium Battle Pass <br> 1x Lucky Egg</h4>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <span>₱70.00</span> <br>
+            <button id="buyButton" class="btn">add to cart</button>
+        </div>
+
+        
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a> 
+            <img class="img" src="./images/Great Raid Box.webp">
+            <h3>GREAT RAID BOX</h3>
+            <h4>Contents: <br> 3x Premium Battle Pass <br> 2x Remote Raid Pass</h4>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₱90.00</span><br> 
+            <button id="buyButton" class="btn">add to cart</button>
+        </div>
+
+        
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a> 
+            <img class="img" src="./images/Voyager Box.webp">
+            <h3>VOYAGER BOX</h3>
+            <h4>Contents: <br> 12x Super Incubator <br> 6x Egg Incubator <br> 2x Poffin</h4>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₱140.00</span> <br>
+            <button id="buyButton" class="btn">add to cart</button>
+        </div>
+
+        
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a> 
+            <img class="img" src="./images/Starter Box.webp">
+            <h3>STARTER BOX</h3>
+            <h4>Contents: <br> 3x Premium Battle Pass <br> 3x Super Incubator <br> 30x Pokeball <br> 3x Lucky Egg </h4>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₱88.00</span><br>
+            <button id="buyButton" class="btn">add to cart</button>
+        </div>
+
+
+</section>
+
+<!--ITEMS-->
+
+<section class="store" id="store">
+    <h3 class="sub-heading">IN GAME ITEMS</h3>
+    <h1 class="heading">RAID PASS, BATTLE PASS, INCUBATOR, POFFIN, POKEBALLS, INCENSE, STAR PIECE, LUCKY EGG, POTIONS, REVIVES, LURE MODULES</h1>
+
+    <div class="box-container">
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a> 
+            <img class="img" src="./images/Remote_Raid_Pass.webp">
+            <h3>Remote Raid Pass</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₱50.00</span> <br>
+            <button id="buyButton" class="btn">add to cart</button>
+        </div>
+
+
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a> 
+            <img class="img" src="./images/Remote_Raid_Pass.webp">
+            <h3>3 Remote Raid Pass</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <span>₱150.00</span> <br>
+            <button id="buyButton" class="btn">add to cart</button>
+        </div>
+
+        
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a> 
+            <img class="img" src="./images/Premium_Battle_Pass.webp">
+            <h3>Premium Battle Pass</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₱60.00</span><br> 
+            <button id="buyButton" class="btn">add to cart</button>
+        </div>
+
+        
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a> 
+            <img class="img" src="./images/Premium_Battle_Pass.webp">
+            <h3>3 Premium Battle Pass</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₱180.00</span> <br>
+            <button id="buyButton" class="btn">add to cart</button>
+        </div>
+
+        
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a> 
+            <img class="img" src="./images/Incubator_Limited.webp">
+            <h3>Egg Incubator</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₱30.00</span> <br>
+            <button id="buyButton" class="btn">add to cart</button>
+        </div>
+
+
+</section>
+
+<!--ITEMS2-->
+
+<section class="store" id="store">
+
+    <div class="box-container">
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a> 
+            <img class="img" src="./images/Super_Incubator.webp">
+            <h3>Super Incubator</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₱70.00</span> <br>
+            <button id="buyButton" class="btn">add to cart</button>
+        </div>
+
+
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a> 
+            <img class="img" src="./images/GO_Poffin.png">
+            <h3>Poffin</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <span>₱20.00</span> <br>
+            <button id="buyButton" class="btn">add to cart</button>
+        </div>
+
+        
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a> 
+            <img class="img" src="./images/Pokeball.webp">
+            <h3>20 PokeBalls</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₱60.00</span><br> 
+            <button id="buyButton" class="btn">add to cart</button>
+        </div>
+
+        
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a> 
+            <img class="img" src="./images/Pokeball.webp">
+            <h3>100 PokeBalls</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₱180.00</span> <br>
+            <button id="buyButton" class="btn">add to cart</button>
+        </div>
+
+        
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a> 
+            <img class="img" src="./images/Pokeball.webp">
+            <h3>200 PokeBalls</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₱30.00</span> <br>
+            <button id="buyButton" class="btn">add to cart</button>
+        </div>
+
+
+</section>
+
+<!--ITEMS3-->
+
+<section class="store" id="store">
+
+    <div class="box-container">
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a> 
+            <img class="img" src="./images/Incense.webp">
+            <h3>Incense</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₱40.00</span> <br>
+            <button id="buyButton" class="btn">add to cart</button>
+        </div>
+
+
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a> 
+            <img class="img" src="./images/Star_Piece.webp">
+            <h3>Star Piece</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <span>₱50.00</span> <br>
+            <button id="buyButton" class="btn">add to cart</button>
+        </div>
+
+        
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a> 
+            <img class="img" src="./images/Lucky_Egg.webp">
+            <h3>Lucky Egg</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₱40.00</span><br> 
+            <button id="buyButton" class="btn">add to cart</button>
+        </div>
+
+        
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a> 
+            <img class="img" src="./images/Potions.webp">
+            <h3>10 Max Potions</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₱100.00</span> <br>
+            <button id="buyButton" class="btn">add to cart</button>
+        </div>
+
+        
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a> 
+            <img class="img" src="./images/Revives.webp">
+            <h3>6 Max revives</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₱120.00</span> <br>
+            <button id="buyButton" class="btn">add to cart</button>
+        </div>
+
+
+</section>
+
+<!--ITEMS4-->
+<section class="store" id="store">
+
+    <div class="box-container">
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a> 
+            <img class="img" src="./images/Glacial_Lure_Module.webp">
+            <h3>Glacial Lure Module</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₱80.00</span> <br>
+            <button id="buyButton" class="btn">add to cart</button>
+        </div>
+
+
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a> 
+            <img class="img" src="./images/Mossy_Lure_Module.webp">
+            <h3>Mossy Lure Module</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <span>₱80.00</span> <br>
+            <button id="buyButton" class="btn">add to cart</button>
+        </div>
+
+        
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a> 
+            <img class="img" src="./images/Magnetic_Lure_Module.webp">
+            <h3>Mossy Lure Module</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₱80.00</span><br> 
+            <button id="buyButton" class="btn">add to cart</button>
+        </div>
+
+        
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a> 
+            <img class="img" src="./images/Rainy_Lure_Module.webp">
+            <h3>Rainy Lure Module</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₱80.00</span> <br>
+            <button id="buyButton" class="btn">add to cart</button>
+        </div>
+
+        
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a> 
+            <img class="img" src="./images/Lure_Module.webp">
+            <h3>Lure Module</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₱60.00</span> <br>
+            <button id="buyButton" class="btn">add to cart</button>
+        </div>
+
+
+</section>
+
+<!-- About Section -->
+
+<section class="about" id="about">
+    <h3 class="ABOUTT">SSERAFIM SHOP PHILLIPINES</h3>
+
+    <div class="row">
+        <div class="image">
+            <img src="./images/sserafim logo.png" alt="">
+        </div>
+
+        <div class="content">
+            <h3>Why top up Pokemon Go items on Sserafim Shop? </h3>
+            <p>Pokemon GO gamers count on Sserafim Shop every day for a seamless purchase experience when buying Pokemon GO Items or vouchers.
+                
+            Purchases are added to your game account instantly. With 24/7 access to customer support.
+            </p>
+            <div class="icons-container">
+                <div class="icons">
+                    <i class="fa fa-diamond"></i>
+                    <span>Instant Delivery</span>
+                </div>
+
+                <div class="icons">
+                    <i class="fas fa-wallet"></i>
+                    <span>Convenient Payment Method</span>
+                </div>
+
+                <div class="icons">
+                    <i class="fas fa-headset"></i>
+                    <span>Speedy & Localized Customer Support</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- footer part -->
+<body>
+    <footer>
+        <div class="row">
+            <div class="col">
+                <p>Pokemon GO is created by Niantic, INC in partnership with GAME FREAK inc., Pokémon and Pokémon character names are trademarks of Nintendo. During gameplay, please be aware of your surroundings and play safely.</p>
+            </div>
+            <div class="col">
+                <h3>Country <div class="underline"><span></span></div></h3>
+                <p>PHILLIPINES</p>
+                <br>
+                <h4>+63 - 0992134411</h4>
+            </div>
+            <div class="col">
+                <h3>Official Pokemon GO Links <div class="underline"><span></span></div></h3>
+               <ul>
+                <li><a href="https://pokemongolive.com/" target="_blank" rel="noopener noreferrer">Pokémon GO Live</a></li>
+                <li><a href="https://pokemongolive.com/leaderboard" target="_blank" rel="noopener noreferrer">Leaderboard</a></li>
+                <li><a href="https://pokemongolive.com/events" target="_blank" rel="noopener noreferrer">Events</a></li>
+                <li><a href="https://pokemongolive.com/community-day/map" target="_blank" rel="noopener noreferrer">Community Day Map</a></li>
+                <li><a href="">Contacts</a></li>
+               </ul>
+            </div>
+            <div class="col">
+                <h3>Stay Updated With Us: <div class="underline"><span></span></div></h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/PokemonGO/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/pokemongoapp/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@pokemongo" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://www.youtube.com/channel/UCA698bls2pjQyiqP9N-iaeg" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">"The copyright owner of the images used on this website is Niantic. This project is for educational purposes only, and no copyright infringement is intended.
+
+            "</p>
+    </footer>
+</body>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./homepage/homepage.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const buyButtons = document.querySelectorAll('.btn');
+            // Define an object to map product names to image paths
+            const imagePaths = {
+                "Pokemon GO Fest 2024: Global Ticket": "./images/GO_FEST_Logo.webp",
+                "Wonder Ticket (Basic)": "./images/Season_of_World_of_Wonders.webp",
+                "Chasing Team GO Rocket Timed Research Ticket": "./images/Team_GO_Rocket.webp",
+                "550 Pokecoins" : "./pokemon img/550 Pokecoins.webp",
+                "1200 Pokecoins" : "./pokemon img/1200 Pokecoins.webp",
+                "2500 Pokecoins" : "./pokemon img/2500 pokecoins.webp",
+                "5200 Pokecoins" : "./pokemon img/5200 pokecoins.webp",
+                "14500 Pokecoins" : "./pokemon img/14500 pokecoins.webp",
+                "GO ROCKET BOX" : "./images/Rocket Box.webp",
+                "TRAINEE BOX" : "./images/Trainee Box.webp",
+                "GREAT RAID BOX" : "./images/Great Raid Box.webp",
+                "VOYAGER BOX" : "./images/Voyager Box.webp",
+                "STARTER BOX" : "./images/Starter Box.webp",
+                "Remote Raid Pass" : "./images/Remote_Raid_Pass.webp",
+                "3 Remote Raid Pass" : "./images/Remote_Raid_Pass.webp",
+                "Premium Battle Pass" : "./images/Premium_Battle_Pass.webp",
+                "3 Premium Battle Pass" : "./images/Premium_Battle_Pass.webp",
+                "Egg Incubator" : "./images/Incubator_Limited.webp",
+                "Super Incubator" : "./images/Super_Incubator.webp",
+                "Poffin" : "./images/GO_Poffin.png",
+                "20 PokeBalls" : "./images/Pokeball.webp",
+                "100 PokeBalls" : "./images/Pokeball.webp",
+                "200 PokeBalls" : "./images/Pokeball.webp",
+                "Incense" : "./images/Incense.webp",
+                "Star Piece" : "./images/Star_Piece.webp",
+                "Lucky Egg" : "./images/Lucky_Egg.webp",
+                "10 Max Potions" : "./images/Potions.webp",
+                "6 Max revives" : "./images/Revives.webp",
+                "Glacial Lure Module" : "./images/Glacial_Lure_Module.webp",
+                "Mossy Lure Module" : "./images/Mossy_Lure_Module.webp",
+                "Magnetic Lure Module" : "./images/Magnetic_Lure_Module.webp",
+                "Rainy Lure Module" : "./images/Rainy_Lure_Module.webp",
+                "Lure Module" : "./images/Lure_Module.webp",
+            };
+
+            buyButtons.forEach(button => {
+                button.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const playerEmail = localStorage.getItem("CurrentLogin");
+                    const productBox = this.parentElement;
+                    const productName = productBox.querySelector('h3').textContent;
+                    const productPrice = productBox.querySelector('span').textContent;
+                    // Retrieve image path from the imagePaths object
+                    const productImage = imagePaths[productName];
+                    
+                    // Assuming you have already defined the product prices in your script
+                    const prices = {
+                        "Pokemon GO Fest 2024: Global Ticket": "₱439.00",
+                        "Wonder Ticket (Basic)": "₱289.00",
+                        "Chasing Team GO Rocket Timed Research Ticket": "₱59.00",
+                        "550 Pokecoins" : "₱149.00",
+                        "1200 Pokecoins" : "₱289.00",
+                        "2500 Pokecoins" : "₱589.00",
+                        "5200 Pokecoins" : "₱1170.00",
+                        "14500 Pokecoins" : "₱2950.00",
+                        "GO ROCKET BOX" : "₱120.00",
+                        "TRAINEE BOX" : "₱70.00",
+                        "GREAT RAID BOX" : "₱90.00",
+                        "VOYAGER BOX" : "₱140.00",
+                        "STARTER BOX" : "₱88.00",
+                        "Remote Raid Pass" : "₱50.00",
+                        "3 Remote Raid Pass" : "₱150.00",
+                        "Premium Battle Pass" : "₱60.00",
+                        "3 Premium Battle Pass" : "₱180.00",
+                        "Egg Incubator" : "₱30.00",
+                        "Super Incubator" : "₱70.00",
+                        "Poffin" : "₱20.00",
+                        "20 PokeBalls" : "₱60.00",
+                        "100 PokeBalls" : "₱180.00",
+                        "200 PokeBalls" : "₱30.00",
+                        "Incense" : "₱40.00",
+                        "Star Piece" : "₱50.00",
+                        "Lucky Egg" : "₱40.00",
+                        "10 Max Potions" : "₱100.00",
+                        "6 Max revives" : "₱120.00",
+                        "Glacial Lure Module" : "₱80.00",
+                        "Mossy Lure Module" : "₱80.00",
+                        "Magnetic Lure Module" : "₱80.00",
+                        "Rainy Lure Module" : "₱80.00",
+                        "Lure Module" : "₱60.00",
+                    };
+        
+                    // Save to local storage
+                    const cartItem = {
+                        name: productName,
+                        price: prices[productName],
+                        image: productImage
+                    };
+        
+                    // Retrieve existing cart items
+                    let cartItems = localStorage.getItem(`${playerEmail}CartItems`) ? localStorage.getItem(`${playerEmail}CartItems`).split(';') : [];
+                    cartItems.push(`${cartItem.name},${cartItem.price},${cartItem.image}`);
+                    localStorage.setItem(`${playerEmail}CartItems`, cartItems.join(';'));
+        
+                    // Optional: Provide feedback to the user (e.g., show a message)
+                    alert('Item added to your cart!');
+                    window.location.href = "./cart.html"
+                });
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const logoutButton = document.querySelector('.logout');
+    
+            logoutButton.addEventListener('click', function(event) {
+                event.preventDefault();
+                localStorage.removeItem('CurrentLoginEmail');
+                window.location.href = 'index.html';
+            });
+        });
+    </script>
+    <script>
+        // Fetch and insert header
+        fetch('header.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('header').innerHTML = data;
+          });
+        
+        // Fetch and insert footer
+        fetch('footer.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('footer').innerHTML = data;
+          });
+        </script>
+</body>
+</html>
